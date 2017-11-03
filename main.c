@@ -11,11 +11,12 @@ void clear(){
 int main()
 {
 	int i, op;
-	printf("Leer de archivo?\n1 - Si\n2 - No (Ingreso por teclado)\n");
+	clear();
+	printf("Sopa de letras\nJoaquin Manuel - Ignacio Seret\nLeer de archivo?\n1 - Si\n2 - No (Ingreso por teclado)\n");
 	scanf("%d",&op);
 	while(!(op==1||op==2)){
 		clear();
-		printf("Leer de archivo?\n1 - Si\n2 - No (Ingreso por teclado)\n");
+		printf("Sopa de letras\nJoaquin Manuel - Ignacio Seret\nLeer de archivo?\n1 - Si\n2 - No (Ingreso por teclado)\n");
 		printf("Ingrese una opcion valida.\n");
 		scanf("%d",&op);
 	}
@@ -32,6 +33,7 @@ int main()
 	}
 	clear();
 	Matriz * sopa = leerSopa();
+	clear();
 	mostrarSopa(*sopa);
 	Universo * a = leerUniverso();
 	printf("\n");

@@ -25,6 +25,7 @@ Matriz * leerSopa(){
 	lectura->numeroFilas=fil;
 	lectura->numeroColumnas=col;
 	lectura->cuerpo = malloc(fil*sizeof(char*));
+	printf("Ingrese las filas sin espacios. Presione enter para una nueva fila.\n");
 	for(i=0; i<fil; i++){
 		lectura->cuerpo[i] = malloc((col+1)*sizeof(char));
 		scanf("%s",buffer);
