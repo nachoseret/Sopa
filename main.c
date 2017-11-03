@@ -1,3 +1,6 @@
+// Sopa de letras
+// Ignacio Seret - Joaquin Manuel
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -5,7 +8,7 @@
 #include "rumpelstinski.c"
 
 void clear(){
-	system("clear"); // Cambiar clear por cls para correr en Windows
+	system("clear"); // Cambiar clear por cls si se quiere correrlo en Windows
 }
 
 int main()

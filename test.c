@@ -1,3 +1,6 @@
+// Sopa de letras
+// Ignacio Seret - Joaquin Manuel
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -57,6 +60,7 @@ void estaEnTest(){
 	assert(estaEn(sopa,"ABCDEFGH")==-1);
 	printf("Los test de estaEn se han ejecutado exitosamente.\n");
 }
+
 int main(){
 	perteneceTest();
 	estaEnDirTest();

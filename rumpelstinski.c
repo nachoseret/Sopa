@@ -1,3 +1,6 @@
+// Sopa de letras
+// Joaquin Manuel - Ignacio Seret
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -18,7 +21,6 @@ typedef struct universo{
 	int tamanioUniverso;
 	char** palabras;
 }Universo;
-
 
 // leerSopa : None -> Matriz *
 // leerSopa pide por stdin la cantidad de filas y columnas de la sopa, para luego pedir el
@@ -80,7 +82,6 @@ int pertenece(int y, int x, Matriz sopa){
 	if(y>=sopa.numeroFilas || y<0) return 0;
 	return 1;
 }
-
 
 // estaEnDir : Matriz, string, int, int, int, int -> int
 // estaEnDir toma como argumentos una estructura de tipo Matriz, una palabra (string) y cuatro enteros
