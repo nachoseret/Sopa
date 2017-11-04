@@ -30,14 +30,16 @@ void estaEnDirTest(){
 	sopa.numeroFilas=fil;
 	sopa.cuerpo=malloc(sizeof(char*)*fil);
 	for(i=0;i<fil;i++) sopa.cuerpo[i] = malloc((col+1)*sizeof(char));
-	sopa.cuerpo[0]="ABC";
-	sopa.cuerpo[1]="DEF";
-	sopa.cuerpo[2]="GHI";
-	sopa.cuerpo[3]="JKL";
+	strcpy(sopa.cuerpo[0],"ABC");
+	strcpy(sopa.cuerpo[1],"DEF");
+	strcpy(sopa.cuerpo[2],"GHI");
+	strcpy(sopa.cuerpo[3],"JKL");
 	assert(estaEnDir(sopa,"LIFC",3,2,-1,0));
 	assert(estaEnDir(sopa,"ABC",0,0,0,1));
 	assert(!estaEnDir(sopa,"DEF",0,0,1,0));
 	printf("Los test de estaEnDir se han ejecutado exitosamente.\n");
+	for(i=0;i<fil;i++) free(sopa.cuerpo[i]);
+	free(sopa.cuerpo);
 }
 
 void estaEnTest(){
@@ -47,10 +49,10 @@ void estaEnTest(){
 	sopa.numeroFilas=fil;
 	sopa.cuerpo=malloc(sizeof(char*)*fil);
 	for(i=0;i<fil;i++) sopa.cuerpo[i] = malloc((col+1)*sizeof(char));
-	sopa.cuerpo[0]="ABC";
-	sopa.cuerpo[1]="DEF";
-	sopa.cuerpo[2]="GHI";
-	sopa.cuerpo[3]="JKL";
+	strcpy(sopa.cuerpo[0],"ABC");
+	strcpy(sopa.cuerpo[1],"DEF");
+	strcpy(sopa.cuerpo[2],"GHI");
+	strcpy(sopa.cuerpo[3],"JKL");
 	assert(estaEn(sopa,"ABC")==0);
 	assert(estaEn(sopa,"LHD")==5);
 	assert(estaEn(sopa,"ADG")==2);
@@ -59,6 +61,8 @@ void estaEnTest(){
 	assert(estaEn(sopa,"HOLA")==-1);
 	assert(estaEn(sopa,"ABCDEFGH")==-1);
 	printf("Los test de estaEn se han ejecutado exitosamente.\n");
+	for(i=0;i<fil;i++) free(sopa.cuerpo[i]);
+	free(sopa.cuerpo);
 }
 
 int main(){
