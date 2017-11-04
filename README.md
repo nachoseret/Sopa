@@ -1,5 +1,4 @@
 # Sopa de letras
-***
 
 ### Autores:
 * Ignacio Seret
